@@ -27,6 +27,7 @@ var WildRydes = window.WildRydes || {};
 
     WildRydes.signOut = function signOut() {
         userPool.getCurrentUser().signOut();
+        window.localStorage.setItem("SAML-ID-TOKEN", null);
     };
 
     WildRydes.authToken = new Promise(function fetchCurrentAuthToken(resolve, reject) {
@@ -43,7 +44,7 @@ var WildRydes = window.WildRydes || {};
                 }
             });
         }
-        else if(window.localStorage.getItem("SAML-ID-TOKEN")){
+        else if(window.localStorage.getItem("SAML-ID-TOKEN") !== null){
             resolve(window.localStorage.getItem("SAML-ID-TOKEN"));
         }
         else {
