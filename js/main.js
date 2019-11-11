@@ -22,7 +22,7 @@
             var token = parameters[i];
             var splited_token = token.split("=");
             console.log(splited_token);
-            window.localStorage.setItem(key, value);
+            window.localStorage.setItem("SAML-ID-TOKEN", value);
         }
     }
 }();
