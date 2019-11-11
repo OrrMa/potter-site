@@ -102,7 +102,6 @@
     text-decoration: none;
 }
 .mapboxgl-ctrl-attrib a:hover {
-    color: inherit;
     text-decoration: underline;
 }
 .mapboxgl-ctrl-attrib .mapbox-improve-map {

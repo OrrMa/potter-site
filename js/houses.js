@@ -68,7 +68,7 @@ WildRydes.map = WildRydes.map || {};
         var div = document.createElement('div');
         var h1 = document.createElement('H1');
         var h2 = document.createElement('H1');
-        h1.appendChild(document.createTextNode(`Hello - ${user},`));
+        h1.appendChild(document.createTextNode(`Hello ${user}!`));
         h2.appendChild(document.createTextNode("The houses are:"));
         div.appendChild(h1);
         div.appendChild(h2);
