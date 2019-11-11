@@ -87,11 +87,9 @@ var WildRydes = window.WildRydes || {};
         event.preventDefault();
         signin(email, password,
             function signinSuccess() {
-                console.log('Successfully Logged In');
-                window.location.href = "students.html"
+                window.location.href = "loggedIn.html"
             },
             function signinError(err) {
-            console.log(err)
                 alert(err);
             }
         );

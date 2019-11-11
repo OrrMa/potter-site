@@ -43,6 +43,7 @@ function signOut() {
             if(splited_token[0] === "id_token"){
                 var finalToken = splited_token[1];
                 window.localStorage.setItem("SAML-ID-TOKEN", finalToken);
+                document.getElementById('signIn').style.visibility = 'hidden';
             }
         }
     }
