@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/font.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="/css/message.css">
+        <link rel="stylesheet" href="css/message.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -34,19 +34,30 @@
             </div>
         </div>
 
-        <header>
-          <img src="images/logo.png">
-        </header>
+        <section style="width: 70%; margin: auto">
+            <div class="col-md-12">
+                <h1>Sign In</h1>
+                <div style="display:inline-block;; width: 40%">
+                    <h1>NYC DOE</h1>
+                    <span style="text-align: center; display: block">
+                    <a href="https://doe-staging.auth.us-east-1.amazoncognito.com/oauth2/authorize?identity_provider=NYC-DOE&redirect_uri=https://www.google.com/&response_type=token&client_id=11q2fvigidejbffbh582sik63d&scope=email phone profile aws.cognito.signin.user.admin openid">
+                        <img border="0" alt="NYC-DOE" src="images/NYC.png" width="400" height="450">
+                    </a>
+                    </span>
+                </div>
+                <div style="display: inline-block; width: 20%">
+                    <h1>Or</h1>
+                </div>
+                <div style="display:inline-block; width: 39%">
+                    <h1>Via</h1>
+                    <form id="signinForm">
+                      <input type="email" id="emailInputSignin" placeholder="Email" required>
+                      <input type="password" id="passwordInputSignin" placeholder="Password" pattern=".*" required>
 
-
-        <section class="form-wrap">
-            <h1>Sign In</h1>
-            <form id="signinForm">
-              <input type="email" id="emailInputSignin" placeholder="Email" required>
-              <input type="password" id="passwordInputSignin" placeholder="Password" pattern=".*" required>
-
-              <input type="submit" value="Sign in">
-            </form>
+                      <input type="submit" value="Sign in">
+                    </form>
+                </div>
+            </div>
         </section>
 
         <script src="js/vendor/jquery-3.1.0.js"></script>
