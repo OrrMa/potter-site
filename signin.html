@@ -34,29 +34,40 @@
             </div>
         </div>
 
-        <section style="width: 70%; margin: auto">
-            <div class="col-md-12">
+        <section style="width: 50%; margin: 0 auto;">
+            <div class="col-md-12" style="
+                background: rgba(255, 255, 255, 0.4);
+                border-radius: 18px;
+                /* margin-top: 59px; */
+                display: flex;
+                flex-direction: column;
+                font-size: 16px;">
                 <h1>Sign In</h1>
-                <div style="display:inline-block;; width: 40%">
-                    <h1>NYC DOE</h1>
-                    <span style="text-align: center; display: block">
-                    <a href="https://doe-staging.auth.us-east-1.amazoncognito.com/oauth2/authorize?identity_provider=NYC-DOE&redirect_uri=https://master.d1p9om0jwdbgj.amplifyapp.com/loggedIn.html&response_type=token&client_id=11q2fvigidejbffbh582sik63d&scope=email phone profile aws.cognito.signin.user.admin openid">
-                        <img border="0" alt="NYC-DOE" src="images/NYC_DOE_Logo.png">
-                    </a>
-                    </span>
+                <div style="
+                        display: flex;
+                        justify-content: space-between;">
+                    <div style="padding: 10px; width: 46%; display: flex; flex-direction: column; align-items: center">
+                        <h2>Sign in with</h2>
+                        <a href="https://doe-staging.auth.us-east-1.amazoncognito.com/oauth2/authorize?identity_provider=NYC-DOE&amp;redirect_uri=https://master.d1p9om0jwdbgj.amplifyapp.com/loggedIn.html&amp;response_type=token&amp;client_id=11q2fvigidejbffbh582sik63d&amp;scope=email phone profile aws.cognito.signin.user.admin openid">
+                            <img border="0" alt="NYC-DOE" src="images/NYC_DOE_Logo.png" style="width: 160px; background-color: white; border-radius: 10px">
+                        </a>
+                    </div>
+                    <div style="padding: 10px; display: flex; justify-content: center;flex-direction: column;">
+                        <div class="vl" style="border-left: 1px solid #999999;height: 100%;margin-left: 10px"></div>
+                        <h3>or</h3>
+                        <div class="vl" style="border-left: 1px solid #999999;height: 100%;margin-left: 10px"></div>
+                    </div>
+                    <div style="padding: 10px; width: 46%; display: flex; flex-direction: column; align-items: center;">
+                        <h2>Via</h2>
+                        <form id="signinForm" style="display: flex; flex-direction: column; align-items: center" autocomplete="off">
+                            <input autocomplete="false" name="hidden" type="text" style="display:none;">
+                            <input type="email" id="emailInputSignin" placeholder="Email" required style="width: 250px; font-size: 16px">
+                            <input type="password" id="passwordInputSignin" placeholder="Password" pattern=".*" required style="width: 250px; font-size: 16px">
+                            <input type="submit" value="Sign in">
+                        </form>
+                    </div>
                 </div>
-                <div style="display: inline-block; width: 20%">
-                    <h1>Or</h1>
-                </div>
-                <div style="display:inline-block; width: 39%">
-                    <h1>Via</h1>
-                    <form id="signinForm">
-                      <input type="email" id="emailInputSignin" placeholder="Email" required>
-                      <input type="password" id="passwordInputSignin" placeholder="Password" pattern=".*" required>
 
-                      <input type="submit" value="Sign in">
-                    </form>
-                </div>
             </div>
         </section>
 
