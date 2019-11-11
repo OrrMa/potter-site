@@ -17,7 +17,7 @@
     var url =document.URL;
     var splitedUrl = url.split("#");
     if(splitedUrl.length > 1) {
-        var parameters = splitedUrl.split("&");
+        var parameters = splitedUrl[1].split("&");
         for(var i=0; i< parameters.length; i++) {
             var token = parameters[i];
             var splited_token = token.split("=");
