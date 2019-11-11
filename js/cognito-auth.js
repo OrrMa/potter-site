@@ -42,7 +42,11 @@ var WildRydes = window.WildRydes || {};
                     resolve(session.getIdToken().getJwtToken());
                 }
             });
-        } else {
+        }
+        else if(window.localStorage.getItem("SAML-ID-TOKEN")){
+            resolve(window.localStorage.getItem("SAML-ID-TOKEN"));
+        }
+        else {
             resolve(null);
         }
     });
