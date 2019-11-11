@@ -21,8 +21,11 @@
         for(var i=0; i< parameters.length; i++) {
             var token = parameters[i];
             var splited_token = token.split("=");
-            console.log(splited_token);
-            window.localStorage.setItem("SAML-ID-TOKEN", value);
+            if(splited_token[0] === "id_token"){
+                var finalToken = splited_token[1];
+                console.log(finalToken);
+                window.localStorage.setItem("SAML-ID-TOKEN", finalToken);
+            }
         }
     }
 }();
