@@ -2,6 +2,18 @@
 
 var WildRydes = window.WildRydes || {};
 WildRydes.map = WildRydes.map || {};
+! function() {
+    var n = $("html"),
+        t = function() {
+            $(".btn-menu").on("click", function(t) {
+                t.preventDefault(), n.toggleClass("menu-opened")
+            })
+        },
+        e = function() {
+            t()
+        };
+    e()
+}();
 
 (
     function rideScopeWrapper($) {
@@ -52,7 +64,8 @@ WildRydes.map = WildRydes.map || {};
             var item = document.createElement('li');
 
             // Set its contents:
-            var h1 = document.createElement("H1");
+            var h1 = document.createElement("H2");
+            h1.style.color = "white";
             h1.appendChild(document.createTextNode(houses[i]));
             item.appendChild(h1);
 
