@@ -44,16 +44,7 @@ if (typeof AWSCognito !== 'undefined') {
             }
         }
     }
-
-    var authToken;
-    WildRydes.authToken.then(function setAuthToken(token) {
-        if (token) {
-            authToken = token;
-        } else {
-            window.location.href = 'signin.html';
-        }
-    }).catch(function handleTokenError(error) {
-        alert(error);
+    else {
         window.location.href = 'signin.html';
-    });
+    }
 }();
