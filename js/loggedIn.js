@@ -44,7 +44,4 @@ if (typeof AWSCognito !== 'undefined') {
             }
         }
     }
-    else {
-        window.location.href = 'signin.html';
-    }
 }();
