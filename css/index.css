@@ -621,3 +621,8 @@ h1{
         page-break-after: avoid;
     }
 }
+
+@font-face {
+    font-family:"HarryPotter";
+    src: url("../fonts/HARRYP__.TTF") format("truetype");
+}

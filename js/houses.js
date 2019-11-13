@@ -62,16 +62,23 @@ WildRydes.map = WildRydes.map || {};
         for(var i = 0; i < houses.length; i++) {
             // Create the list item:
             var item = document.createElement('li');
+            item.style.color = 'white';
 
             // Set its contents:
-            var h1 = document.createElement("H2");
-            h1.style.color = "white";
-            h1.appendChild(document.createTextNode(houses[i]));
-            item.appendChild(h1);
+            // Set its contents:
+            var textDiv = document.createElement("div");
+            textDiv.style.color = 'white';
+            textDiv.style.fontSize = '45px';
+            textDiv.style.fontFamily = 'HarryPotter';
+            var textNode = document.createTextNode(houses[i]);
+            textDiv.appendChild(textNode);
+            item.appendChild(textDiv);
 
             // Add it to the list:
             list.appendChild(item);
         }
+
+
 
         // Finally, return the constructed list:
         return list;
@@ -79,12 +86,23 @@ WildRydes.map = WildRydes.map || {};
 
     function makeUserElement(user) {
         var div = document.createElement('div');
-        var h1 = document.createElement('H1');
-        var h2 = document.createElement('H1');
-        h1.appendChild(document.createTextNode(`Hello ${user}!`));
-        h2.appendChild(document.createTextNode("The houses are:"));
-        div.appendChild(h1);
-        div.appendChild(h2);
+        div.style.fontFamily = "HarryPotter";
+        var innerDiv = document.createElement('div');
+        var helloDiv = document.createElement('div');
+        var studentsDiv = document.createElement('div');
+        var br = document.createElement('br');
+        innerDiv.style.color = 'white';
+        innerDiv.style.fontSize = '60px';
+        innerDiv.style.display = 'flex';
+        innerDiv.style.flexDirection = 'column';
+        innerDiv.style.flexDirection = 'column';
+        helloDiv.appendChild(document.createTextNode(`Hello, ${user}!`));
+        studentsDiv.appendChild(document.createTextNode("The Houses at Hogwarts are:"));
+        innerDiv.appendChild(helloDiv);
+        innerDiv.appendChild(br);
+        innerDiv.appendChild(studentsDiv);
+        div.appendChild(innerDiv);
+        div.style.margin = '30px';
         return div
     }
 

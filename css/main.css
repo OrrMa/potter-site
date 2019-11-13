@@ -2161,3 +2161,8 @@ img {
         font-size: 1.5rem;
     }
 }
+
+@font-face {
+    font-family:"HarryPotter";
+    src: url("../fonts/HARRYP__.TTF") format("truetype");
+}

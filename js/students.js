@@ -63,12 +63,15 @@ WildRydes.map = WildRydes.map || {};
         for(var i = 0; i < students.length; i++) {
             // Create the list item:
             var item = document.createElement('li');
+            item.style.color = 'white';
 
             // Set its contents:
-            var h1 = document.createElement("H3");
-            h1.style.color = 'white';
-            h1.appendChild(document.createTextNode(students[i]));
-            item.appendChild(h1);
+            var textDiv = document.createElement("div");
+            textDiv.style.color = 'white';
+            textDiv.style.fontSize = '45px';
+            textDiv.style.fontFamily = 'HarryPotter';
+            textDiv.appendChild(document.createTextNode(students[i]));
+            item.appendChild(textDiv);
 
             // Add it to the list:
             list.appendChild(item);
@@ -80,12 +83,23 @@ WildRydes.map = WildRydes.map || {};
 
     function makeUserElement(user) {
         var div = document.createElement('div');
-        var h1 = document.createElement('H1');
-        var h2 = document.createElement('H1');
-        h1.appendChild(document.createTextNode(`Hello ${user} !`));
-        h2.appendChild(document.createTextNode("The students are:"));
-        div.appendChild(h1);
-        div.appendChild(h2);
+        div.style.fontFamily = "HarryPotter";
+        var innerDiv = document.createElement('div');
+        var helloDiv = document.createElement('div');
+        var studentsDiv = document.createElement('div');
+        var br = document.createElement('br');
+        innerDiv.style.color = 'white';
+        innerDiv.style.fontSize = '60px';
+        innerDiv.style.display = 'flex';
+        innerDiv.style.flexDirection = 'column';
+        innerDiv.style.flexDirection = 'column';
+        helloDiv.appendChild(document.createTextNode(`Hello, ${user}!`));
+        studentsDiv.appendChild(document.createTextNode("Currently registered students to Hogwarts:"));
+        innerDiv.appendChild(helloDiv);
+        innerDiv.appendChild(br);
+        innerDiv.appendChild(studentsDiv);
+        div.appendChild(innerDiv);
+        div.style.margin = '30px';
         return div
     }
 
